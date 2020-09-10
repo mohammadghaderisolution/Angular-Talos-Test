@@ -1,0 +1,27 @@
+<div class="pageTitle">
+  list of post
+</div>
+<div class="postList">
+  <div class="post" *ngFor="let post of postList">
+    <div class="imageHolder">
+      <img src="http://localhost:3000{{post.photoUrl}}" alt="">
+    </div>
+    <div class="content">
+
+      <div class="title">
+        {{post.title}}
+      </div>
+      <div class="dsc">
+        {{post.description}}
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="tags">
+        <div class="tag_item" *ngFor="let tag of post.tags">
+          {{tag}}
+        </div>
+      </div>
+      <button class="btn-detail" routerLink="/post-detail/{{post.id}}">view</button>
+    </div>
+  </div>
+</div>

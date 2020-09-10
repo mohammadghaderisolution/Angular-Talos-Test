@@ -1,0 +1,171 @@
+
+@import '../sass/custom-mixins.scss';
+body {
+  margin:0;
+  font-size:16px;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  li {
+    @include zeroPadding();
+    @include zeroMargin();
+    list-style: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 10px 0;
+    font-weight: 300;
+
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+  
+  h2 {
+    font-size: 26px;
+
+  }
+  
+  h3 {
+    font-size: 22px;
+
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+  
+  h5 {
+    font-size: 16px;
+  }
+  
+  h6 {
+    font-size: 14px;
+  }
+  
+  p {
+    margin: 10px 0 0;
+    font-size: 16px;
+  }
+  
+  section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  strong {
+    @include font-weight(bold);
+  }
+  
+  a:focus,
+  a:hover,
+  a:-webkit-any-link,
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  input {
+    background: none;
+    @include placeholder(rgba(#000, 0.5), null);
+  }
+  
+  input,
+  input:focus {
+    outline: none;
+    border: none;
+  }
+  
+  input,
+  select,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    background-color: transparent;
+  }
+  
+  input[type="number"],
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+  }
+  
+  button {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  .mgtb40{
+    margin: 40px 0;
+  }
+  .mgb40{
+    margin-bottom: 40px;
+  }
+  .pageTitle{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom:1px solid rgba(rgb(134, 2, 2),0.3);
+    
+  }
+  .btn-submit{
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: rgb(87, 158, 77);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    width: 150px;
+  }
+  .btn-addTag{
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: rgb(79, 157, 247);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+footer{
+  background: rgb(35, 58, 77);
+  padding: 20px 0;
+  p{
+    color: #fff;
+    margin-bottom: 15px;
+
+  }
+}
+.main{
+  padding-bottom: 100px;
+}

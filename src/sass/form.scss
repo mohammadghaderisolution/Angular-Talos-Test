@@ -1,0 +1,41 @@
+.formInput{
+    margin-top: 60px;
+    label{
+        display: block;
+        font-weight: 600;
+        
+    }
+    input{
+        padding: 3px 3px 3px 7px;
+        border: 1px solid rgba(#000,0.3);
+        border-radius: 10px;
+        margin-top: 10px;
+        width: 100%;
+
+    }
+    textarea{
+        padding: 3px 3px 3px 7px;
+        border: 1px solid rgba(#000,0.3);
+        border-radius: 10px;
+        margin-top: 10px;
+        width: 100%;
+        outline: none;
+        
+    }
+    &.tag{
+        .tagInput{
+            display: flex;
+            justify-content: space-between;
+        }
+        input{
+            width: 70%;
+        }
+    }
+}
+.form-bottom{
+    text-align: center;
+    margin-top: 20px;
+    .btn-submit{
+        display: inline-block;
+    }
+}

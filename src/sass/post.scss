@@ -1,0 +1,141 @@
+.postList{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+}
+.post{
+    border-radius: 15px;
+    box-shadow: 0 1px 2px 0 rgba(#000,.2);
+    width: 30%;
+    overflow: hidden;
+    &.post-detail{
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        &:hover{ 
+            img{
+                transform: scale(1);
+            }
+        }
+        img{
+            width: 100%;
+            height: 500px;
+            border-radius: 0;
+        }
+        .title{
+            text-align: center;
+            width: 100%;
+            margin-top: 60px;
+            
+        }
+        .dsc{
+            margin-top: 60px;
+        }
+        .bottom{
+            border-top: none;
+            margin-top: 100px;
+            .tags{
+                width: 100%;
+            }
+        }
+        
+    }
+   &:hover{ 
+        img{
+            transform: scale(1.1);
+        }
+    }
+    .imageHolder{
+        width: 100%;
+    }
+        img{
+            border-radius: 15px 15px 0 0;
+            width: 100%;
+            height: 250px;
+            transition: all linear 0.3s;
+        }
+    .content{
+        padding: 15px;
+
+    }
+    .title{
+        font-weight: 500;
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 250px;
+        text-overflow: ellipsis;
+
+
+    }
+    .dsc{
+        font-size: 15px;
+        color: rgba(#000,.8);
+        height: 120px;
+        overflow: hidden;
+
+
+
+    }
+    .bottom{
+        padding: 10px ;
+        border-top: 1px solid rgba(#000,.2);
+        display: flex;
+        justify-content: space-between;
+
+        
+        .btn-detail{
+            width: 20%;
+
+        }
+
+    }
+}
+.btn-detail{
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid rgb(212, 132, 132);
+}
+.tags{
+    width: 80%; 
+    &.create{
+        width: 100%;
+        margin-top: 30px;
+        .tag_item{
+            font-size: 15px;padding: 0px 10px;
+            margin-right: 10px;
+            button{
+                @include inlineBlock;
+                svg{
+                    width: 10px;
+                    height: 10px;
+                    fill: #000;
+                    fill: #000;
+                    stroke: #000;
+                }
+            }
+        }
+    }
+    .tag_item{
+        @include inlineBlock;
+        margin-right: 3px;
+        font-size: 12px;
+        padding: 0px 5px;
+        border: 1px solid rgb(238, 119, 119);
+        border-radius: 15px;
+        
+
+
+    }
+}
+.createPost{
+padding-bottom: 200px;
+.img-preview{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+}

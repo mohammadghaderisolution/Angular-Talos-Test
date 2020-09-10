@@ -1,0 +1,21 @@
+
+<div class="post post-detail">
+    <img src="http://localhost:3000{{post?.photoUrl}}" alt="">
+    <div class="content">
+       <div class="title">
+    {{post?.title}}
+  </div>
+  <div class="dsc">
+    {{post?.description}}
+  </div>
+    </div>
+ 
+  <div class="bottom">
+    <div class="tags">
+      <div class="tag_item" *ngFor="let tag of post?.tags">
+        {{tag}}
+      </div>
+    </div>
+  </div>
+
+</div>

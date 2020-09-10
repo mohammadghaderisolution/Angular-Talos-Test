@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    box-shadow: 0 1px 3px 0 rgba(#000,0.3);
+    .logo{
+        font-size: 20px;
+        font-weight: bold;
+        svg{
+            width: 117px;
+            height: 23px;
+            display: inline-flex;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+    .menu{
+        .btn-add{
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+    }
+
+}
