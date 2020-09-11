@@ -12,22 +12,23 @@ export class ApiService{
     }
     private handleError(err: HttpErrorResponse) {
         console.log(err.message);
-        //console.log(this.currentUrl);
-        // switch(err.status){
-        //   case 400:console.log()
-        // }
-        // if (isPlatformBrowser(this.platformId)) {
+      
         return Observable.throw(new Error(`${"error"} ${err.message}`));
-        // }
       }
     getData<T>(url: string): Observable<T> {
-        return this._http.get(`${CONFIGS.BASE_URL}${url}`).pipe(
-          map(data => <T>data),
+        // response base on status code for error handling in view
+        
+        return this._http.get(`${CONFIGS.BASE_URL}${url}`,{observe: 'response'}).pipe(
+          map((response:Response) => {
+            console.log(response)
+           return { status: response.status, data: response.body }
+          }),
           catchError(this.handleError)
         );
       }
     
       postData<T>(url: string, body?: object): Observable<T> {
+        // regular response handling
         return this._http
           .post(`${CONFIGS.BASE_URL}${url}`, body)
           .pipe(

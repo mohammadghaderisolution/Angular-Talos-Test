@@ -16,7 +16,7 @@ export class PostDatailComponent implements OnInit {
   ngOnInit() {
     
     this._postService.getPostDetail(this.route.snapshot.paramMap.get('id')).subscribe(data=>{
-      this.post=data;
+      this.post=data.data;
     })
 
   }

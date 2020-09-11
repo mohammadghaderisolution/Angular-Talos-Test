@@ -141,13 +141,23 @@ ul {
     
   }
   .btn-submit{
-    padding: 5px 10px;
+    position: relative;
+    padding: 10px 15px;
     border-radius: 15px;
     background: rgb(87, 158, 77);
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
+    .loader{
+      position: absolute;
+      right: 10px;
+      top: 9px;
+    }
+  }
+  .btn-noBorder{
+    @include inlineBlock;
+    margin-right: 10px;
   }
   .btn-addTag{
     padding: 10px 15px;
@@ -168,4 +178,37 @@ footer{
 }
 .main{
   padding-bottom: 100px;
+}
+.loader {
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #d44c12;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  &.big{
+    width: 45px;
+    height: 45px;
+    border-width: 6px;
+    border-top-width: 6px;
+  }
+ 
+}
+.successMessage{
+  display: block;
+  color: green;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 10px 0;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

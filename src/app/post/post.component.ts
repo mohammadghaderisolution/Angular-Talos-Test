@@ -13,8 +13,14 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {
     this.postService.getPostList().subscribe((data)=>{
-      console.log(data)
-      this.postList=data;
+      // if response is ok
+      if(data.status===200){
+
+        this.postList=data.data;
+      }
+      else{
+        //Errro Message 
+      }
 
     })
   }

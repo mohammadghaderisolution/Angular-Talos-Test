@@ -31,6 +31,13 @@
             width: 70%;
         }
     }
+    .errorMessage{
+        display: block;
+        margin: 7px 0;
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+    }
 }
 .form-bottom{
     text-align: center;
